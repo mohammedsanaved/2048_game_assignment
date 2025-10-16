@@ -1,0 +1,49 @@
+.score {
+  background: var(--primary-background);
+  border-radius: calc(var(--pixel-size) * 0.75);
+  color: var(--tile-background);
+  font-size: calc(var(--pixel-size) * 3.5);
+  line-height: calc(var(--pixel-size) * 3);
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  margin: 12px;
+}
+.total-score {
+  background-color: var(--tile-background);
+  color: var(--primary-text-color);
+  padding: 8px 12px;
+  border: calc(var(--pixel-size) * 0.5) solid var(--button-background);
+  border-radius: calc(var(--pixel-size) * 0.75);
+  font-size: calc(var(--pixel-size) * 2.5);
+}
+.current-score {
+  background-color: var(--tile-background);
+  color: var(--primary-text-color);
+  border: calc(var(--pixel-size) * 0.5) solid var(--button-background);
+  padding: 8px 24px;
+  border-radius: calc(var(--pixel-size) * 0.75);
+  font-size: calc(var(--pixel-size) * 2.5);
+}
+
+.score > div {
+  font-size: calc(var(--pixel-size) * 2.5);
+  color: var(--secondary-text-color);
+}
+
+@media (min-width: 512px) {
+  .score {
+    /* border: calc(var(--pixel-size) * 1) solid var(--secondary-background); */
+    font-size: calc(var(--pixel-size) * 2);
+    line-height: calc(var(--pixel-size) * 3.5);
+    flex-wrap: wrap;
+  }
+
+  .score > div {
+    font-size: calc(var(--pixel-size) * 3.5);
+  }
+}

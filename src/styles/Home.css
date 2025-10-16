@@ -1,0 +1,117 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  margin-top: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Restart Button */
+.restart-button {
+  padding: 10px 22px;
+  background-color: var(--button-background);
+  color: var(--secondary-text-color);
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid var(--button-background);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.restart-button:hover {
+  background-color: var(--secondary-background);
+  color: var(--primary-text-color);
+}
+
+/* Controls wrapper */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Start text */
+.start-text {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-text-color);
+}
+
+/* Buttons area */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.button {
+  padding: 8px 14px;
+  background-color: var(--secondary-background);
+  color: var(--primary-text-color);
+  border: 1px solid var(--secondary-background);
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--button-background);
+  color: var(--secondary-text-color);
+}
+
+/* RESPONSIVE DESIGN BREAKPOINTS */
+@media (max-width: 600px) {
+  .container {
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .restart-button {
+    width: 80%;
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  .start-text {
+    font-size: 18px;
+  }
+
+  .button-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+  }
+
+  .button {
+    flex: 1 1 40%;
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .restart-button {
+    width: 100%;
+  }
+}

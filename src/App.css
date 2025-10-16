@@ -1,0 +1,88 @@
+.board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.twenty48 {
+  margin: calc(var(--pixel-size) * 0) auto;
+  padding: calc(var(--pixel-size) * 1);
+  width: 100%;
+  max-width: calc(var(--pixel-size) * 37);
+}
+
+.button-restart {
+  width: calc(var(--pixel-size) * 12.5);
+  height: calc(var(--pixel-size) * 6.5);
+  margin: calc(var(--pixel-size) * 1);
+  border-radius: calc(var(--pixel-size) * 1);
+  background: var(--tile-background);
+  color: var(--primary-text-color);
+  font-size: calc(var(--pixel-size) * 2);
+  line-height: calc(var(--pixel-size) * 6.5);
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+.button-restart:hover {
+  background-color: var(--cell-background);
+  transition: all 0.2s ease-in-out;
+  animation-duration: 300ms;
+  box-shadow: 0 0 50px 5px var(--secondary-text-color);
+  /* inset 0 0 0 1px rgba(255, 255, 255, 2); */
+}
+
+@media (min-width: 512px) {
+  .twenty48 {
+    max-width: calc(var(--pixel-size) * 60);
+  }
+}
+
+.twenty48 > header {
+  display: flex;
+  align-items: center;
+  margin: calc(var(--pixel-size) * 1) calc(var(--pixel-size) * 0);
+}
+
+.twenty48 > header > * {
+  flex: 1;
+}
+
+.twenty48 > footer {
+  margin: calc(var(--pixel-size) * 3) calc(var(--pixel-size) * 0);
+  font-weight: 600;
+  text-align: center;
+}
+
+.twenty48 > footer > .socials {
+  display: flex;
+  justify-content: center;
+  margin-bottom: calc(var(--pixel-size) * 2);
+}
+
+.twenty48 > footer > .socials > a > img {
+  vertical-align: middle;
+  margin: calc(var(--pixel-size) * 0.5);
+}
+
+@media (min-width: 512px) {
+  .twenty48 > footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: left;
+  }
+
+  .twenty48 > footer > div {
+    width: 100%;
+  }
+
+  .twenty48 > footer > .socials {
+    justify-content: right;
+    margin-bottom: calc(var(--pixel-size) * 0);
+  }
+
+  .twenty48 > footer > .socials > a > img:last-child {
+    margin: calc(var(--pixel-size) * 1);
+    margin-right: calc(var(--pixel-size) * 0);
+  }
+}
