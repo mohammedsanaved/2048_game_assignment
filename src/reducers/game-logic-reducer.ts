@@ -2,9 +2,9 @@ import { uid } from 'uid';
 import { Tile, TileMap } from '../types/tile';
 import { flattenDeep, isEqual, isNil } from 'lodash';
 
-type GameStatus = 'ongoing' | 'won' | 'lost';
+export type GameStatus = 'ongoing' | 'won' | 'lost';
 
-type State = {
+export type State = {
   board: string[][];
   tiles: TileMap;
   tilesByIds: string[];
@@ -78,7 +78,7 @@ export const initialState: State = {
   boardSize: 4,
 };
 
-export const gameReducer = (state: State, action: Action) => {
+export const gameReducer = (state: State, action: Action): State => {
   switch (action.type) {
     case 'clean_up': {
       const flattenBoard = flattenDeep(state.board);

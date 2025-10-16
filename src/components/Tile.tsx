@@ -1,5 +1,4 @@
 import { memo, useEffect, useState, useContext } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import { mergeAnimationDuration } from '../../contant';
 import { Tile as TileProps } from '../types/tile';
 import usePreviousProps from '../hooks/use-previous-prop';
@@ -13,7 +12,6 @@ function parsePx(value: string | null): number {
 
 function Tile({ position, value }: TileProps) {
   const { boardSize } = useContext(GameContext);
-  const isWideScreen = useMediaQuery({ minWidth: 512 });
 
   const [scale, setScale] = useState(1);
   const previousValue = usePreviousProps<number>(value);

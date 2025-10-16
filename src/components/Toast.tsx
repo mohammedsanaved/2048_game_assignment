@@ -9,7 +9,7 @@ export default function Toast({ heading = 'You won!', type = '' }) {
     <div className={`splash ${type === 'won' && 'win'}`}>
       <div>
         <h1>{heading}</h1>
-        <button className='button' onClick={startGame}>
+        <button className='button' onClick={() => startGame(4)}>
           Play again
         </button>
       </div>
